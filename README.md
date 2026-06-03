@@ -52,7 +52,35 @@
 | `ANON_KEY` | `eyJhbGciOiJIUzI1NiIs...` | 前端固定的 Supabase 公钥 |
 | `TG_BOT_TOKEN` | `123456789:ABCdef...` | （可选）Telegram 机器人 Token |
 | `TG_USER_ID` | `987654321` | （可选）你的 Telegram 个人数字 ID |
+```
+🔍 抓取 ANON_KEY 详细步骤
+第一步：打开登录页面与开发者工具
+退出你当前在 Freemchost 的登录状态，回到 Freemchost 登录页面。
 
+按键盘上的 F12（或右键选择“检查”），打开浏览器开发者工具。
+
+切换到 Network（网络） 标签页。
+
+在网络面板的过滤器（Filter）输入框中，输入 token?grant_type=password。
+
+第二步：触发登录抓包
+在网页上输入你的邮箱和密码，点击 Login（登录） 按钮。
+
+此时，下方的网络面板中会弹出一个名为 token?grant_type=password... 的请求。
+
+点击这个请求，在右侧切换到 Headers（标头） 标签页。
+
+第三步：提取 ANON_KEY
+在 Headers 视图中，向下滚动找到 Request Headers（请求标头） 区域，你会看到两个关键的字段：
+
+apikey
+
+authorization
+
+这两个字段后面跟着的那串以 eyJhbGci... 开头、长达几百位的超级长字符串，就是 ANON_KEY。
+
+注意：复制的时候，如果是 authorization 字段，记得不要复制前面的 Bearer  这几个字母，只复制后面 eyJ 开头的纯密文即可。`
+```
 ### 3. 文件结构说明
 请确保你的 GitHub 仓库中包含以下核心文件且路径正确：
 ```text

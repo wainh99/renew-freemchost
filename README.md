@@ -1,6 +1,6 @@
 # 🚀 Freemchost 服务器全自动续期助手
 
-[![Server Auto Renew](https://github.com/替换为你的GitHub用户名/替换为你的仓库名/actions/workflows/auto_renew.yml/badge.svg)](https://github.com/替换为你的GitHub用户名/替换为你的仓库名/actions)
+[![Server Auto Renew](https://github.com/zhisibi/renew-freemchost/actions/workflows/auto_renew.yml/badge.svg)](https://github.com/zhisibi/renew-freemchost/actions)
 ![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Platform](https://img.shields.io/badge/platform-GitHub%20Actions-orange)
 
